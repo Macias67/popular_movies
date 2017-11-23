@@ -10,11 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+//se define la ruta al login
+Route::get('/',function(){
+    return view('auth/login');
 });
-/*Route::get('popular_movies', function () {
-    return view('popular');
-});*/
-Route::get('popular_movies', 'ControllerMovies@getPopular');
+//se define la ruta al controlador ControllerMovies y a la funcion getPopular
+Route::get('popular_movies','ControllerMovies@getPopular');
+//se define la ruta para peliculas favoritas
+Route::get('myfavorites','FavoritasController@index');

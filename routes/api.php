@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use App\Movies;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+//se definen las rutas de la api para los metodos a utilizar
+Route::get('favoritas','FavoritasController@index');
+Route::post('favoritas','FavoritasController@store');
+Route::delete('favoritas/{id}','FavoritasController@delete');

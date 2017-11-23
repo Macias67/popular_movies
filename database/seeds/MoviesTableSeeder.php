@@ -10,7 +10,7 @@ class MoviesTableSeeder extends Seeder
      * @return void
      */
     public function run(){
-    	Movies::truncate();
+    	/*Movies::truncate();
         $faker = \Faker\Factory::create();
 		// And now, let's create a few articles in our database:
         for ($i = 0; $i < 50; $i++) {
@@ -21,6 +21,6 @@ class MoviesTableSeeder extends Seeder
                 'sinopsis' => $faker->paragraph,
                 'imagen' => $faker->sentence,
             ]);
-        }
+        }*/
     }
 }
